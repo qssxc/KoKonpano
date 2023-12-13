@@ -11,6 +11,8 @@ public class NoteManager : MonoBehaviour
 
     TimingManager theTimingManager;
     EffectManager theEffect;
+    
+
     void Start()
     {
         theTimingManager = GetComponent<TimingManager>();
@@ -36,7 +38,7 @@ public class NoteManager : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("yes");
+        
         if (collision.CompareTag("Note"))
         {
             if (collision.GetComponent<Note>().GetNoteFlag())

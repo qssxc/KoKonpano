@@ -9,6 +9,7 @@ public class TimingManager : MonoBehaviour
 
     [SerializeField] Transform Center = null;
     [SerializeField] RectTransform[] timingRect = null;
+    [SerializeField] GameObject button = null;
     Vector2[] timingBoxs = null;
 
     // Start is called before the first frame update
@@ -16,9 +17,10 @@ public class TimingManager : MonoBehaviour
     ScoreManager theScoreManager;
     void Start()
     {
+        
         theEffect = FindObjectOfType<EffectManager>();
         theScoreManager = FindObjectOfType<ScoreManager>();
-
+        
         timingBoxs = new Vector2[timingRect.Length];
         
         for (int i = 0; i < timingRect.Length; i++)
@@ -28,6 +30,10 @@ public class TimingManager : MonoBehaviour
             Debug.Log(Center.localPosition.y);
             Debug.Log(Center.localPosition.y);
         }
+    }
+    private void Update()
+    {
+        
     }
 
     // Update is called once per frame

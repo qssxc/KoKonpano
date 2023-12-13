@@ -9,7 +9,6 @@ public class TimingManager : MonoBehaviour
 
     [SerializeField] Transform Center = null;
     [SerializeField] RectTransform[] timingRect = null;
-    [SerializeField] GameObject button = null;
     Vector2[] timingBoxs = null;
 
     // Start is called before the first frame update

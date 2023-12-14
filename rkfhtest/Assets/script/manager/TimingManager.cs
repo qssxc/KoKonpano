@@ -51,8 +51,9 @@ public class TimingManager : MonoBehaviour
                     boxNoteList.RemoveAt(i);
 
                     if (x < timingBoxs.Length - 1)
-                        theEffect.NoteHitEffect();
-
+                    { 
+                        theEffect.NoteHitEffect();                       
+                    }
                     theEffect.JudgementEffect(x);
                     return;
 

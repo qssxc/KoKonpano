@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6279593680265948621}
   - component: {fileID: 220452445706264013}
   - component: {fileID: 7848995744208262900}
+  - component: {fileID: 8867228679972321952}
   m_Layer: 0
   m_Name: note
   m_TagString: Note
@@ -105,6 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteSpeed: 4
+  noteHitAnimator: {fileID: 8867228679972321952}
 --- !u!50 &6279593680265948621
 Rigidbody2D:
   serializedVersion: 4
@@ -185,3 +187,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643506820662137171}
   m_CullTransparentMesh: 1
+--- !u!95 &8867228679972321952
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643506820662137171}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a4e86bbec609231439953c1291822b72, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

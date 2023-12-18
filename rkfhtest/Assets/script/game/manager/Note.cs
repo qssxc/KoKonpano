@@ -8,6 +8,7 @@ public class Note : MonoBehaviour
 {
     public float noteSpeed = 400;
     bool move = true;
+    int notemode = 0;  //0=short,1=long
     [SerializeField] Animator noteHitAnimator = null;
     UnityEngine.SpriteRenderer noteImage;
     private void Start()
@@ -27,9 +28,16 @@ public class Note : MonoBehaviour
     }
     public void HideNote()
     {
-        move = false;
-        noteHitAnimator.SetTrigger("Hit");
-        Invoke("noteenabled", .2f);
+        if (notemode == 0)
+        {
+            move = false;
+            noteHitAnimator.SetTrigger("Hit");
+            Invoke("noteenabled", .2f);
+        }
+        else if (notemode==1)
+        {
+
+        }
     }
     public void noteenabled()
     {

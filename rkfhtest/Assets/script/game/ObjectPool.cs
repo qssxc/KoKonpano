@@ -16,13 +16,20 @@ public class ObjectPool : MonoBehaviour
     [SerializeField] ObjectInfo[] objectInfo = null;
 
     public Queue<GameObject> noteQueue = new Queue<GameObject>(); // Pool
-
-
+    public Queue<GameObject> noteQueue1 = new Queue<GameObject>();
+    public Queue<GameObject> noteQueue2 = new Queue<GameObject>();
+    public Queue<GameObject> noteQueue3 = new Queue<GameObject>();
+    public Queue<GameObject> noteQueue4 = new Queue<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
        instance = this;
        noteQueue = InsertQueue(objectInfo[0]);
+       noteQueue1 = InsertQueue(objectInfo[1]);
+       noteQueue2 = InsertQueue(objectInfo[2]);
+       noteQueue3 = InsertQueue(objectInfo[3]);
+       noteQueue4 = InsertQueue(objectInfo[4]);
+
     }
 
     Queue<GameObject> InsertQueue(ObjectInfo p_objectInfo)

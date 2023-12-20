@@ -53,6 +53,7 @@ public class TimingManager : MonoBehaviour
                         Debug.Log("HIT" + x);
                         boxNoteList[i].GetComponent<Note>().HideNote();
                         boxNoteList.RemoveAt(i);
+                        
 
                         if (x < timingBoxs.Length - 1)
                         {
@@ -66,7 +67,7 @@ public class TimingManager : MonoBehaviour
             }
         }
 
-        theEffect.JudgementEffect(timingBoxs.Length);
+        //theEffect.JudgementEffect(timingBoxs.Length);
     }
     public void StartCheckLong()
     {
@@ -100,10 +101,11 @@ public class TimingManager : MonoBehaviour
     }
     public void EndCheckLong()
     {
-        Debug.Log("up");
+        int suc = 0;
+        Debug.Log("up"+boxNoteList.Count);
         for (int i = 0; i < boxNoteList.Count; i++)
         {
-            float t_notePosX = longtop[i].transform.position.y;
+            float t_notePosX = longtop[0].transform.position.y;
             
             if (boxNoteList[i].GetComponent<Note>().notemode == 1)
             {
@@ -113,21 +115,33 @@ public class TimingManager : MonoBehaviour
                     if (timingBoxs[x].x <= t_notePosX && t_notePosX <= timingBoxs[x].y)
                     {
                         Debug.Log("HIT" + x);
-                        boxNoteList[i].GetComponent<Note>().HideNote();
-                        boxNoteList.RemoveAt(i);
-
+                        
                         if (x < timingBoxs.Length - 1)
                         {
+                            suc = 1;
+                            Debug.Log("success");
                             theEffect.NoteHitEffect();
+                            boxNoteList[i].GetComponent<Note>().HideNote();
+                            boxNoteList.RemoveAt(i);
+                            longbottom.RemoveAt(i);
+                            longtop.RemoveAt(i);
+                            
                         }
+                        Debug.Log("ABCD");
                         theEffect.JudgementEffect(x);
                         return;
 
                     }
+                    
+
                 }
+                boxNoteList[i].GetComponent<Note>().HideNote();
+                boxNoteList.RemoveAt(i);
+                longbottom.RemoveAt(i);
+                longtop.RemoveAt(i);
             }
         }
-
-        theEffect.JudgementEffect(timingBoxs.Length);
+        if(suc==0)
+            theEffect.JudgementEffect(timingBoxs.Length);
     }
 }

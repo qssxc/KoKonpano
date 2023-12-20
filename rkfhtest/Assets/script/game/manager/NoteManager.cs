@@ -11,6 +11,7 @@ public class NoteManager : MonoBehaviour
 
     TimingManager theTimingManager;
     EffectManager theEffect;
+    public int line_1a = 0;
     
 
     void Start()
@@ -35,16 +36,20 @@ public class NoteManager : MonoBehaviour
             }
             else if (linenumber == 1)
             {
-                GameObject t_note1 = ObjectPool.instance.noteQueue1.Dequeue();
-                t_note1.transform.position = tfNoteAppear.position;
-                t_note1.SetActive(true);
+                if (line_1a == 1)
+                {
+                    GameObject t_note1 = ObjectPool.instance.noteQueue1.Dequeue();
+                    t_note1.transform.position = tfNoteAppear.position;
+                    t_note1.SetActive(true);
 
-                theTimingManager.boxNoteList.Add(t_note1);
-                currentTime -= 60d / bpm;
+                    theTimingManager.boxNoteList.Add(t_note1);
+                    line_1a = 0;
+                }
             }
 
             else if (linenumber == 2)
             {
+                
                 GameObject t_note2 = ObjectPool.instance.noteQueue2.Dequeue();
                 t_note2.transform.position = tfNoteAppear.position;
                 t_note2.SetActive(true);
@@ -68,7 +73,8 @@ public class NoteManager : MonoBehaviour
                 t_note4.SetActive(true);
                 Transform toplong = t_note4.transform.GetChild(0);
                 Transform bottomlong = t_note4.transform.GetChild(1);
-                Debug.Log(t_note4.transform.localPosition.y);
+                
+                Debug.Log(toplong.transform.position.y);
                 theTimingManager.boxNoteList.Add(t_note4);
                 theTimingManager.longtop.Add(toplong);
                 theTimingManager.longbottom.Add(bottomlong);

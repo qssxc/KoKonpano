@@ -818,6 +818,7 @@ MonoBehaviour:
   bpm: 10
   linenumber: 4
   tfNoteAppear: {fileID: 546575247}
+  line_1a: 0
 --- !u!1 &160102711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,6 +1393,7 @@ MonoBehaviour:
   bpm: 0
   linenumber: 3
   tfNoteAppear: {fileID: 1017216633}
+  line_1a: 0
 --- !u!4 &258664724
 Transform:
   m_ObjectHideFlags: 0
@@ -3640,9 +3642,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d91c64f4a221594889c880957aa824a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm: 60
+  bpm: 0
   linenumber: 1
   tfNoteAppear: {fileID: 1390592685}
+  line_1a: 0
 --- !u!4 &985211665
 Transform:
   m_ObjectHideFlags: 0
@@ -5088,6 +5091,7 @@ MonoBehaviour:
   bpm: 0
   linenumber: 2
   tfNoteAppear: {fileID: 114628508}
+  line_1a: 0
 --- !u!4 &1573110055
 Transform:
   m_ObjectHideFlags: 0
@@ -5481,9 +5485,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d91c64f4a221594889c880957aa824a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm: 60
+  bpm: 0
   linenumber: 0
   tfNoteAppear: {fileID: 540317536}
+  line_1a: 0
 --- !u!61 &1675569424
 BoxCollider2D:
   m_ObjectHideFlags: 0

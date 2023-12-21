@@ -5,14 +5,16 @@ using UnityEngine;
 public class NoteManager : MonoBehaviour
 {
     public int bpm = 0;
-    double currentTime = 0d;
     [SerializeField] int linenumber = 0;
     [SerializeField] Transform tfNoteAppear = null;
 
     TimingManager theTimingManager;
     EffectManager theEffect;
+    public int line_0a = 0;
     public int line_1a = 0;
-    
+    public int line_2a = 0;
+    public int line_3a = 0;
+
 
     void Start()
     {
@@ -20,19 +22,18 @@ public class NoteManager : MonoBehaviour
         theEffect = FindObjectOfType<EffectManager>();
     }
     void Update()
-    {
-        currentTime += Time.deltaTime;
-
-        if (currentTime >= 60d / bpm)
-        {
+    {       
             if (linenumber == 0)
             {
+                if (line_0a == 1)
+                {
                 GameObject t_note = ObjectPool.instance.noteQueue.Dequeue();
                 t_note.transform.position = tfNoteAppear.position;
                 t_note.SetActive(true);
 
                 theTimingManager.boxNoteList.Add(t_note);
-                currentTime -= 60d / bpm;
+                line_0a = 0;
+                }
             }
             else if (linenumber == 1)
             {
@@ -49,40 +50,30 @@ public class NoteManager : MonoBehaviour
 
             else if (linenumber == 2)
             {
-                
+            if (line_2a == 1)
+                {
                 GameObject t_note2 = ObjectPool.instance.noteQueue2.Dequeue();
                 t_note2.transform.position = tfNoteAppear.position;
                 t_note2.SetActive(true);
 
                 theTimingManager.boxNoteList.Add(t_note2);
-                currentTime -= 60d / bpm;
+                line_2a = 0;
+                }
             }
             else if (linenumber == 3)
             {
+                if (line_2a == 1)
+                {
                 GameObject t_note3 = ObjectPool.instance.noteQueue3.Dequeue();
                 t_note3.transform.position = tfNoteAppear.position;
                 t_note3.SetActive(true);
 
                 theTimingManager.boxNoteList.Add(t_note3);
-                currentTime -= 60d / bpm;
+                line_3a = 0;
+                }
             }
-            else if (linenumber == 4)
-            {
-                GameObject t_note4 = ObjectPool.instance.noteQueue4.Dequeue();
-                t_note4.transform.position = tfNoteAppear.position;
-                t_note4.SetActive(true);
-                Transform toplong = t_note4.transform.GetChild(0);
-                Transform bottomlong = t_note4.transform.GetChild(1);
-                
-                Debug.Log(toplong.transform.position.y);
-                theTimingManager.boxNoteList.Add(t_note4);
-                theTimingManager.longtop.Add(toplong);
-                theTimingManager.longbottom.Add(bottomlong);
-
-                currentTime -= 60d / bpm;
-            }
-
-        }
+           
+       
     }
 
    

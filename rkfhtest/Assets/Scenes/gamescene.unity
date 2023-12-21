@@ -815,10 +815,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d91c64f4a221594889c880957aa824a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm: 10
+  bpm: 0
   linenumber: 4
   tfNoteAppear: {fileID: 546575247}
+  line_0a: 0
   line_1a: 0
+  line_2a: 0
+  line_3a: 0
 --- !u!1 &160102711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,7 +1396,10 @@ MonoBehaviour:
   bpm: 0
   linenumber: 3
   tfNoteAppear: {fileID: 1017216633}
+  line_0a: 0
   line_1a: 0
+  line_2a: 0
+  line_3a: 0
 --- !u!4 &258664724
 Transform:
   m_ObjectHideFlags: 0
@@ -2756,6 +2762,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &676615367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 676615369}
+  - component: {fileID: 676615368}
+  m_Layer: 0
+  m_Name: Notetime
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &676615368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676615367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c367d5205e8a50c4e9ee3eee8f5c63f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameJson: {fileID: 2004648510}
+  line0: {fileID: 1675569423}
+  line1: {fileID: 985211664}
+  line2: {fileID: 1573110054}
+  line3: {fileID: 258664723}
+--- !u!4 &676615369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676615367}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &687262232
 GameObject:
   m_ObjectHideFlags: 0
@@ -3645,7 +3700,10 @@ MonoBehaviour:
   bpm: 0
   linenumber: 1
   tfNoteAppear: {fileID: 1390592685}
+  line_0a: 0
   line_1a: 0
+  line_2a: 0
+  line_3a: 0
 --- !u!4 &985211665
 Transform:
   m_ObjectHideFlags: 0
@@ -5091,7 +5149,10 @@ MonoBehaviour:
   bpm: 0
   linenumber: 2
   tfNoteAppear: {fileID: 114628508}
+  line_0a: 0
   line_1a: 0
+  line_2a: 0
+  line_3a: 0
 --- !u!4 &1573110055
 Transform:
   m_ObjectHideFlags: 0
@@ -5488,7 +5549,10 @@ MonoBehaviour:
   bpm: 0
   linenumber: 0
   tfNoteAppear: {fileID: 540317536}
+  line_0a: 0
   line_1a: 0
+  line_2a: 0
+  line_3a: 0
 --- !u!61 &1675569424
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6274,6 +6338,65 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &2004648509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2004648511}
+  - component: {fileID: 2004648510}
+  m_Layer: 0
+  m_Name: Json
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2004648510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004648509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f91e98ec9ec5144ad5bd7a8c856733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notedata:
+    notemode: 1
+    notelong: 0
+    notenumber: 0
+    notetime: 0
+  data:
+    data:
+    - notemode: 1
+      notelong: 0
+      notenumber: 0
+      notetime: 0
+    - notemode: 1
+      notelong: 1.1
+      notenumber: 0
+      notetime: 0
+--- !u!4 &2004648511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004648509}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2082789007
 GameObject:
   m_ObjectHideFlags: 0
@@ -6420,3 +6543,5 @@ SceneRoots:
   - {fileID: 1796298964}
   - {fileID: 160102713}
   - {fileID: 628323494}
+  - {fileID: 2004648511}
+  - {fileID: 676615369}

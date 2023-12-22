@@ -20,6 +20,9 @@ public class ObjectPool : MonoBehaviour
     public Queue<GameObject> noteQueue2 = new Queue<GameObject>();
     public Queue<GameObject> noteQueue3 = new Queue<GameObject>();
     public Queue<GameObject> noteQueue4 = new Queue<GameObject>();
+    public Queue<GameObject> noteQueue5 = new Queue<GameObject>();
+    public Queue<GameObject> noteQueue6 = new Queue<GameObject>();
+    public Queue<GameObject> noteQueue7 = new Queue<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,9 @@ public class ObjectPool : MonoBehaviour
        noteQueue2 = InsertQueue(objectInfo[2]);
        noteQueue3 = InsertQueue(objectInfo[3]);
        noteQueue4 = InsertQueue(objectInfo[4]);
+       noteQueue5 = InsertQueue(objectInfo[5]);
+       noteQueue6 = InsertQueue(objectInfo[6]);
+       noteQueue7 = InsertQueue(objectInfo[7]);
 
     }
 

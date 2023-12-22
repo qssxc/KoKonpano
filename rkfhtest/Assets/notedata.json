@@ -7,10 +7,28 @@
       "notetime": 1.0
     },
     {
-      "notemode": 0,
+      "notemode": 1,
       "notelong": 0.0,
       "notenumber": 0,
-      "notetime": 2.0
+      "notetime": 9.0
+    },
+    {
+      "notemode": 1,
+      "notelong": 0.0,
+      "notenumber": 1,
+      "notetime": 12.0
+    },
+    {
+      "notemode": 1,
+      "notelong": 0.0,
+      "notenumber": 2,
+      "notetime": 15.0
+    },
+    {
+      "notemode": 1,
+      "notelong": 0.0,
+      "notenumber": 3,
+      "notetime": 19.0
     }
   ]
 }

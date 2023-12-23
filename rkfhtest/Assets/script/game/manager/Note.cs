@@ -17,6 +17,7 @@ public class Note : MonoBehaviour
     }
     void OnEnable()
     {
+        
         if (noteImage == null)
             noteImage = GetComponent<UnityEngine.SpriteRenderer>();
         noteImage.enabled = true;

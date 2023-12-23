@@ -969,6 +969,7 @@ MonoBehaviour:
   line_2a: 0
   line_3a: 0
   notemode: 0
+  notelong: 0
 --- !u!4 &258664724
 Transform:
   m_ObjectHideFlags: 0
@@ -2998,6 +2999,7 @@ MonoBehaviour:
   line_2a: 0
   line_3a: 0
   notemode: 0
+  notelong: 0
 --- !u!4 &985211665
 Transform:
   m_ObjectHideFlags: 0
@@ -4262,6 +4264,7 @@ MonoBehaviour:
   line_2a: 0
   line_3a: 0
   notemode: 0
+  notelong: 0
 --- !u!4 &1573110055
 Transform:
   m_ObjectHideFlags: 0
@@ -4628,6 +4631,7 @@ MonoBehaviour:
   line_2a: 0
   line_3a: 0
   notemode: 0
+  notelong: 0
 --- !u!61 &1675569424
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5413,7 +5417,7 @@ MonoBehaviour:
     - notemode: 0
       notelong: 0
       notenumber: 1
-      notetime: 1
+      notetime: 3
     - notemode: 0
       notelong: 0
       notenumber: 0

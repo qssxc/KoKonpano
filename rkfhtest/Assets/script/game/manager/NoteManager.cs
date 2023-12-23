@@ -15,7 +15,7 @@ public class NoteManager : MonoBehaviour
     public int line_2a = 0;
     public int line_3a = 0;
     public int notemode = 0;
-
+    public float notelong;
     void Start()
     {
         theTimingManager = GetComponent<TimingManager>();
@@ -42,9 +42,11 @@ public class NoteManager : MonoBehaviour
                     Debug.Log("longlong");
                     GameObject t_note4 = ObjectPool.instance.noteQueue4.Dequeue();
                     t_note4.transform.position = tfNoteAppear.position;
+                    t_note4.transform.localScale = new Vector3(1, 1 * notelong, 1);
                     t_note4.SetActive(true);
                     Transform toplong = t_note4.transform.GetChild(0);
                     Transform bottomlong = t_note4.transform.GetChild(1);
+                    
                     Debug.Log(toplong.transform.position.y);
                     theTimingManager.boxNoteList.Add(t_note4);
                     theTimingManager.longtop.Add(toplong);
@@ -71,6 +73,7 @@ public class NoteManager : MonoBehaviour
                     Debug.Log("longlong");
                     GameObject t_note5 = ObjectPool.instance.noteQueue5.Dequeue();
                     t_note5.transform.position = tfNoteAppear.position;
+                    t_note5.transform.localScale = new Vector3(1, 1*notelong, 1);
                     t_note5.SetActive(true);
                     Transform toplong = t_note5.transform.GetChild(0);
                     Transform bottomlong = t_note5.transform.GetChild(1);
@@ -101,6 +104,7 @@ public class NoteManager : MonoBehaviour
                     Debug.Log("longlong");
                     GameObject t_note6 = ObjectPool.instance.noteQueue6.Dequeue();
                     t_note6.transform.position = tfNoteAppear.position;
+                    t_note6.transform.localScale = new Vector3(1, 1*notelong, 1);
                     t_note6.SetActive(true);
                     Transform toplong = t_note6.transform.GetChild(0);
                     Transform bottomlong = t_note6.transform.GetChild(1);
@@ -131,6 +135,7 @@ public class NoteManager : MonoBehaviour
                     Debug.Log("longlong");
                     GameObject t_note7 = ObjectPool.instance.noteQueue7.Dequeue();
                     t_note7.transform.position = tfNoteAppear.position;
+                    t_note7.transform.localScale = new Vector3(1, 1*notelong, 1);
                     t_note7.SetActive(true);
                     Transform toplong = t_note7.transform.GetChild(0);
                     Transform bottomlong = t_note7.transform.GetChild(1);

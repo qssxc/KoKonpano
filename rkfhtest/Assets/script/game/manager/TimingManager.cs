@@ -42,10 +42,11 @@ public class TimingManager : MonoBehaviour
         Debug.Log("click");
         for (int i = 0; i < boxNoteList.Count; i++)
         {
-            float t_notePosX = boxNoteList[i].transform.position.y;
-            
             if (boxNoteList[i].GetComponent<Note>().notemode == 0)
             {
+            float t_notePosX = boxNoteList[i].transform.position.y;
+            
+            
                 for (int x = 0; x < timingBoxs.Length; x++)
                 {
                     if (timingBoxs[x].x <= t_notePosX && t_notePosX <= timingBoxs[x].y)
@@ -64,6 +65,7 @@ public class TimingManager : MonoBehaviour
 
                     }
                 }
+                theEffect.JudgementEffect(timingBoxs.Length);
             }
         }
 
@@ -74,10 +76,11 @@ public class TimingManager : MonoBehaviour
         Debug.Log("down");
         for (int i = 0; i < boxNoteList.Count; i++)
         {
-            float t_notePosX = longbottom[i].transform.position.y;
-
             if (boxNoteList[i].GetComponent<Note>().notemode == 1)
             {
+            float t_notePosX = longbottom[i].transform.position.y;
+
+            
                 for (int x = 0; x < timingBoxs.Length; x++)
                 {
                     if (timingBoxs[x].x <= t_notePosX && t_notePosX <= timingBoxs[x].y)
@@ -93,11 +96,11 @@ public class TimingManager : MonoBehaviour
 
                     }
                 }
-                
+                theEffect.JudgementEffect(timingBoxs.Length);
             }
         }
 
-        theEffect.JudgementEffect(timingBoxs.Length);
+        
     }
     public void EndCheckLong()
     {
@@ -105,10 +108,11 @@ public class TimingManager : MonoBehaviour
         Debug.Log("up"+boxNoteList.Count);
         for (int i = 0; i < boxNoteList.Count; i++)
         {
-            float t_notePosX = longtop[0].transform.position.y;
-            
             if (boxNoteList[i].GetComponent<Note>().notemode == 1)
             {
+            float t_notePosX = longtop[0].transform.position.y;
+            
+            
                 for (int x = 0; x < timingBoxs.Length; x++)
                 {
 

@@ -49,22 +49,27 @@ public class Notetime : MonoBehaviour
                 //UnityEngine.Debug.Log(data.notenumber);
                 switch (data.notenumber)
             {
+                   
                 case 0:
                         line0.notemode = data.notemode;
                         line0.line_0a = 1;
-                    break;
+                        line0.notelong = data.notelong;
+                        break;
                 case 1:
                         line1.notemode = data.notemode;
                         line1.line_1a = 1;
-                    break;
+                        line1.notelong = data.notelong;
+                        break;
                 case 2:
                         line2.notemode = data.notemode;
                         line2.line_2a = 1;
-                    break;
+                        line2.notelong = data.notelong;
+                        break;
                 case 3:
                         line3.notemode = data.notemode;
                         line3.line_3a = 1;
-                    break;
+                        line3.notelong = data.notelong;
+                        break;
             }
             }
 

@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class GameJson : MonoBehaviour
 {
+    TextAsset textAsset;
     // Start is called before the first frame update
     public Notedata notedata;
     public Data data;   
@@ -33,8 +34,18 @@ public class GameJson : MonoBehaviour
         data = JsonUtility.FromJson<Data>(jsonData);
         return data;
     }
+    public Data FromJson()
+    {
+        // 데이터를 불러올 경로 지정
+        textAsset = Resources.Load<TextAsset>("Note/Notedata");
+        // 파일의 텍스트를 string으로 저장
+        // 이 Json데이터를 역직렬화하여 playerData에 넣어줌
+        data = JsonUtility.FromJson<Data>(textAsset.ToString());
+        return data;
+    }
     private void Start()
     {
+        SavenotedataToJson();
         Debug.Log(data);
     }
 }

@@ -10,7 +10,7 @@ public class Notetime : MonoBehaviour
 {
     Stopwatch timer = new Stopwatch();
     public GameJson gameJson;
-    Data data;
+    static public Data data;
     Notedata notedata;
     public NoteManager line0;
     public NoteManager line1;
@@ -22,6 +22,7 @@ public class Notetime : MonoBehaviour
     {
         notedata = new Notedata();
         data = gameJson.LoadnotedataFromJson();
+        gameJson.SavenotedataToJson();
         timer.Start();
         StartCoroutine(countTime(0.1f));
     }

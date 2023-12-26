@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
+using UnityEngine.UIElements;
 
 public class setchat : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class setchat : MonoBehaviour
     public TMP_Text chattext;
     public chat chatmanaeger;
     static public ChatData ChatData;
+    [SerializeField] GameObject Nt;
     GameObject st;
     public int chatcount;
     // Start is called before the first frame update
@@ -20,7 +22,7 @@ public class setchat : MonoBehaviour
         Debug.Log(st.GetComponent<sting>().chatcout);
         chatcount = st.GetComponent<sting>().chatcout;
         ChatData = chatmanaeger.Loadchatdata();
-        
+        Nt.SetActive(false);
 
         Chatstart();
     }
@@ -30,6 +32,9 @@ public class setchat : MonoBehaviour
     {      
             nametext.text = ChatData.chatdata[chatcount].name;
             chattext.text = ChatData.chatdata[chatcount].chating;
-            chatcount++;        
+            chatcount++;
+            st.GetComponent<sting>().chatcout = chatcount;
+        Nt.SetActive(true);
     }
+    
 }

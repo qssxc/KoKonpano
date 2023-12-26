@@ -22,7 +22,7 @@ public class Notetime : MonoBehaviour
     {
         notedata = new Notedata();
         data = gameJson.LoadnotedataFromJson();
-        gameJson.SavenotedataToJson();
+        //gameJson.SavenotedataToJson();
         timer.Start();
         StartCoroutine(countTime(0.1f));
     }
@@ -34,18 +34,19 @@ public class Notetime : MonoBehaviour
     }
     private void notespawn()
     {
-        //UnityEngine.Debug.Log("yes");
+        UnityEngine.Debug.Log("yes");
        
 
         foreach ( Notedata data in data.data )
         {
             //UnityEngine.Debug.Log(Math.Round(timer.Elapsed.TotalSeconds, 1));
-            
-            
-             
-            if (data.notetime == Math.Round(timer.Elapsed.TotalSeconds, 1))
+
+            UnityEngine.Debug.Log(data.notetime);
+            UnityEngine.Debug.Log(Math.Round(timer.Elapsed.TotalSeconds, 1));
+
+            if (data.notetime.ToString() == Math.Round(timer.Elapsed.TotalSeconds, 1).ToString())
             {
-                UnityEngine.Debug.Log(data.notemode);
+                
                 //UnityEngine.Debug.Log(data.notetime);
                 //UnityEngine.Debug.Log(data.notenumber);
                 switch (data.notenumber)

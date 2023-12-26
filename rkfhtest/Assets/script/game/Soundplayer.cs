@@ -11,7 +11,6 @@ public class Soundplayer : MonoBehaviour
     public AudioClip DNA;
     public AudioClip FMA;
     public AudioClip LEMON;
-    public AudioClip WHY;
     public AudioClip ICH;
     public int nowbgm;
     GameObject ee;
@@ -29,9 +28,8 @@ public class Soundplayer : MonoBehaviour
             case 2:
                 myAudio.clip = LEMON; break;
             case 3:
-                myAudio.clip = WHY; break;
-            case 4:
                 myAudio.clip = ICH; break;
+
         }
         Invoke("getaudio", 2.0f);
     }

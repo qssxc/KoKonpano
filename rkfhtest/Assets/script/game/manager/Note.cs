@@ -29,17 +29,11 @@ public class Note : MonoBehaviour
     }
     public void HideNote()
     {
-        if (notemode == 0)
-        {
+        
             move = false;
             noteHitAnimator.SetTrigger("Hit");
             Invoke("Noteenabled", .2f);
-        }
-        else if (notemode==1)
-        {
-            move = false;
-            Invoke("Noteenabled", .0f);
-        }
+        
     }
     public void Noteenabled()
     {

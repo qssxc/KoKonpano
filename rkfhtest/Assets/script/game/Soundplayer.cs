@@ -17,8 +17,8 @@ public class Soundplayer : MonoBehaviour
     GameObject ee;
     private void Start()
     {
-        ee = GameObject.Find("GameObject");
-        nowbgm = ee.GetComponent<editmusic>().nowmusic;
+        ee = GameObject.Find("settings");
+        nowbgm = ee.GetComponent<sting>().nowmusic;
         
         switch (nowbgm)
         {

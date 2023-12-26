@@ -7,30 +7,30 @@ using UnityEngine;
 public class editmusic : MonoBehaviour
 {
 
-    public int nowmusic =0;
+    [SerializeField] sting sting;
     [SerializeField] public TMP_Text text;
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+        sting.nowmusic = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        string textString = nowmusic.ToString();
+        string textString = sting.nowmusic.ToString();
         Debug.Log(textString);
         text.text = textString;
     }
     public void click()
     {
-        if (nowmusic == 4)
+        if (sting.nowmusic == 4)
         {
-            nowmusic = 0;
+            sting.nowmusic = 0;
         }
         else
         {
-            nowmusic += 1;
+            sting.nowmusic += 1;
         }
     }
 }

@@ -20,4 +20,8 @@ public class startmenu : MonoBehaviour
     {
         SceneManager.LoadScene("startmenu");
     }
+    public void gochat()
+    {
+        SceneManager.LoadScene("chatscene");
+    }
 }

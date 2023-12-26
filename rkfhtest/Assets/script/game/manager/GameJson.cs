@@ -26,10 +26,21 @@ public class GameJson : MonoBehaviour
     [ContextMenu("From Json Data")]
     public Data LoadnotedataFromJson()
     {
-        if (File.Exists("C:/Users/user/AppData/LocalLow/KoKonpano/rkfhtest/notedata.json"))
+        
+        if (File.Exists("C:/Users/산다라/AppData/LocalLow/KoKonpano/rkfhtest"))
         {
+            Debug.Log("yes");
             // 데이터를 불러올 경로 지정
-            string path = Path.Combine(Application.persistentDataPath, "notedata.json");
+            string path = Path.Combine("C: /Users산다라/AppData/LocalLow/KoKonpano/rkfhtest");
+            // 파일의 텍스트를 string으로 저장
+            string jsonData = File.ReadAllText(path);
+            // 이 Json데이터를 역직렬화하여 playerData에 넣어줌
+            data = JsonUtility.FromJson<Data>(jsonData);
+            return data;
+        }
+        else if (File.Exists("C:/Users/Admin/AppData/LocalLow/KoKonpano/rkfhtest"))
+        {
+            string path = Path.Combine("C:/Users/Admin/AppData/LocalLow/KoKonpano/rkfhtest");
             // 파일의 텍스트를 string으로 저장
             string jsonData = File.ReadAllText(path);
             // 이 Json데이터를 역직렬화하여 playerData에 넣어줌
